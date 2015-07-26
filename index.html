@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reliably Deploying Rails Applications Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to make setting up a VPS for rails and deploying with Capistrano, painless and repeatable">
+    <meta name="author" content="Ben Dixon">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <!-- Font-awesmome Css -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<!-- Theme CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Magnific Popup CSS -->
+	<link href="assets/js/plugins/magnificPopup/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <!-- Quotes Rotator CSS -->
+	<link href="assets/js/plugins/QuotesRotator/css/QuotesRotator.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/plugins/QuotesRotator/js/modernizr.custom.js"></script>
+
+    
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+	<header id="marketing">
+    <div class="container">
+     <div class="row">
+        <div class="span12">
+        	<div class="header-inner">
+        	<a class="logo pull-left" href="#">Reliably Deploying Rails Applications</a>   
+        	<div class="social-icons text-right pull-right">
+                <a href="#"><i class="icon-facebook"></i></a>
+                <a href="#"><i class="icon-twitter"></i></a>
+            </div><!--/social-icons-->
+            </div><!--/header-inner-->
+        </div><!--/span12-->
+        <div class="clearfix"></div>
+        <div class="span12">
+        <div class="masthead">
+        	<div class="row">
+	            <div class="span5 text-center">
+                	<div class="marketing-media">
+                	<img src="assets/img/rdrcover.jpg" alt="How to sell online books" width="228" height="316" />
+                    </div><!--/marketing-media-->
+                </div><!--/span5-->
+            	<div class="span7">
+                	<h1 class="hero-title">How to Deploy Rails Applications</h1>
+                    <p class="hero-desc">
+                      Learn how to make deploying a Rails application to your own VPS as easy as deploying to Heroku.
+                      Includes full sample code for Chef & Capistrano, regularly updated and tested on Linode & Digital Ocean. "Quickstart" chapters allow you to have a server running a Rails application within an hour.
+                    </p>
+                    <form class="hero-form">
+                        <fieldset>
+                        <div class="row-fluid">
+                            <label>Enter your email address to download the sample chapter</label>
+                            <input type="text" class="span7" placeholder="Email Address" id="email"/>
+                            <button class="btn btn-info btn-large span5">Download Now</button>                            
+                        </div>    
+                        </fieldset>
+                        <p class="text-small">Full eBook includes PDF, ePub and Kindle versions 
+                    </form>
+                </div><!--/span7-->
+            </div><!--/row-->
+        </div><!--/masthead-->
+        </div><!--/span12-->
+        </div><!--/row-->
+        </div><!--/container-->
+     </header><!--/marketing-->
+
+     <section id="inside" class="sec-wrap">
+     	<div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2 class="sec-title"><span>Whats Inside?</span></h2>
+            </div><!--span12-->
+         </div><!--/row-->
+         <div class="row">   
+            <div class="span6">
+          		<div class="" id="">
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-parent="#chapter" href="#collapseOne">
+                          1.0 Introduction
+                        </a>
+                      </div>
+                      <div >
+                        <div class="accordion-inner">
+                          <p class="text-lead">An introduction to the structure of the book, the philosophy behind deploying web applications robustly and which parts it's essential to read depending on your goals.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          3.0 Tools and Terminology
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A brief look at why using a tool to automate the setting up of servers is important and some high level terminology we'll encounter when using this books automation tool of choice; Chef.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          5.0 Anatomy of a Chef Solo Project
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A deeper dive into Chef and Chef Solo, the terminology associated with it and how to create a Chef project from scratch. Think `rails new` but for server configurations.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          5.2 Node and Role Definitions
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">First a look at the concept of a "node definition", a json file which defines everything about a server to be created. Then a look at how Chef allows us to create re-usable pieces of functionality which can then be applied to multiple servers or re-used in future projects using "roles".</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          6.1 Managing Cookbooks with Berkshelf
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">For Rails we have bundler for making sure the correct dependencies are installed, for Chef we have Berkshelf which performs exactly the same function. With Berkshelf we can make sure we have all of the required "cookbooks" for setting up a server, making it easy to mix leveraging community written cookbooks with functionality we've developed ourselves.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          8.0 Security
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">Starting off with a look at some common security gotchas when deploying to a fresh VPS. Then some more detail around how to lock down SSH access, manage firewall rules and automatically set up users and public keys.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          10.0 Monit
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">When something crashes, in a perfect world, it will fix itself. This chapter covers how to use Monit to automatically monitor the health of services and restart them when they fail. In the event this fails, how to have Monit alert us via email so we can intervene and save the day.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          12.0 PostgreSQL
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">How to setup PostgreSQL, manage the different types of authentication, ensure we have the desired version and manage importing and exporting data.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          14.0 MongoDB
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A quick look at when MongoDB is an appropriate data store then how to ensure we have the correct version installed and workaround any incompatibilities in community cookbooks for newer versions. Finally a quick introduction to importing and exporting databases.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          16.0 Capistrano Quickstart
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">Like chapter 4, a chapter for those of us who prefer to read the instructions later. This chapter covers the minimum steps need to deploy an existing Rails application to our fresh new server.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          16.2 Writing Custom Capistrano Tasks
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">Our goal is to automate everything about interacting with our server. Eventually there will be something we need to do which no-one else has automated in a way we can re-use. This chapter covers writing custom Capistrano tasks. Once we've mastered this we can automate almost every interaction with our server imaginable.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          18.0 Virtualhosts and SSL
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A deeper look at Nginx virtualhosts which control where requests are routed after they reach NGinx. Then a look at how to setup SSL and manage certificate rotation.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          20.0 Automated Backups
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">It's an unfortunate fact that eventually a server will fail. In this chapter we setup automatic database backups to Amazon S3 (or any other number of destinations) to ensure that in the event of a complete server failure, our data is recoverable.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    
+              </div><!--/accordion-->
+            </div><!--/span6-->
+            <div class="span6">
+	               <div class="" id="">
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          2.0 The Stack
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">An overview of the components which will make up our production Rails configuration, their purpose and a high level look at the rationale between choosing each one.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          4.0 Quick Start
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A chapter for the "read the instructions afterwards" types among us. This chapter provides step by step instructions for setting up a fully working, reproducible Rails server using the books sample code and a few simple commands.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          5.1 Creating a Chef Cookbook
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A detailed guide to how to create custom Chef cookbooks. Cookbooks are like gems but for re-usable bits of functionality on a server. We'll begin with the commands we'd type in by hand to install a piece of software on the server and convert this into the simplest possible cookbook to automate the process. We'll then iterate on this to take advantage of some of Chefs more powerful features.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          6.0 A Template for Rails Servers
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A more detailed introduction to the sample configuration which was used in Chapter 4's quick-start to setup a fully working server in just a few minutes.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          7.0 Basic Server Setup
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">The bare bones components needed on any server, how - and when - to setup automatic package updates, how to have the systems time keep automatically updated and why so many people get caught out by locales.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          9.0 Rails Server Setup
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">Making sure we have some basic packages and development headers required for installing common gems then a more detailed look at how to install Ruby and make sure we have the correct version available to our Rails application.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          11.0 NGinx
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">Nginx will be the first port of call when a request comes in. How to setup virtual hosts, serve static assets and a look at why we need Nginx at all.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          13 MySQL
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">How to setup MySQL, manage the different types of authentication and ensure we have the required components installed for the MySQL gem. Finally a quick introduction to importing and exporting data.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          15.0 Redis & Memcached
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A brief chapter on the two simplest parts of our stack. How to install Redis and Memcached, configuring whether or not they're bound to localhost and managing the maximum size they can reach.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          16.1 Deploying with Capistrano
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">A much more detailed introduction to how to deploy to our new server with Capistrano 3 whilst using no none-core Capistrano gems. Includes a brief look at the difference between versions 2 and 3 and a detailed section on managing server specific configuration files.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                      <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          17.0 Unicorn Configuration and Zero Downtime
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">How to configure deployment so that when we deploy, there's a seamless switch from one version to the next, with no gap while the new version starts. Includes a detailed section on causes of potential problems when setting this up and how to troubleshoot if it doesn't work reliably.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+                    <div class="">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                          19.0 Sidekiq
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body ">
+                        <div class="accordion-inner">
+                           <p class="text-lead">Sidekiq is one of the most popular and efficient background job processing libraries in the Rails ecosystem. Here we cover how to integrate starting and stopping Sidekiq workers as part of the deployment process and how to setup monitoring so they'll be automatically restarted in the event of a failure.</p>
+                        </div>
+                      </div>
+                    </div><!--/accordion-group-->
+              </div><!--/accordion-->
+            </div><!--/span6-->
+        </div><!--/row-->
+        </div><!--/container-->
+     </section><!--/inside-->
+     
+     
+     <section id="testimonial" class="sec-wrap">
+     	<div class="container">
+        <div class="row">
+            <div class="span8 offset2">
+            <div id="cbp-qtrotator" class="cbp-qtrotator">
+            	<div class="cbp-qtcontent">
+                	<blockquote>
+                    <div class="testi-thumb"><img src="assets/img/alagoon.jpg" alt="user-photo" width="100" height="100"/></div>
+                    <p class="testi-text">
+                    "I have found this book to deliver detailed insights into a great topic. This book is full of variety and great instructional methods the knowledge and expertse displayed in this book has allowed me to grow my business."</p>
+                    <h4 class="testi-user">User Name</h4>
+                    <small>Founder &amp; CEO, Company Name</small>
+                </blockquote>
+                </div><!--/cbp-qtcontent-->
+                <div class="cbp-qtcontent">
+                	<blockquote>
+                    <div class="testi-thumb"><img src="assets/img/VinThomas.jpg" alt="user-photo" width="100" height="100"/></div>
+                    <p class="testi-text">
+                    "I have found this book to deliver detailed insights into a great topic. This book is full of variety and great instructional methods the knowledge and expertse displayed in this book has allowed me to grow my business."</p>
+                    <h4 class="testi-user">User Name</h4>
+                    <small>Marketing, Company Name</small>
+                </blockquote>
+                </div><!--/cbp-qtcontent-->
+                
+            </div><!--/cbp-qtrotator-->
+            </div><!--span8-->
+        </div><!--/row-->
+        </div><!--/container-->
+     </section><!--/inside-->
+     
+     <section id="author" class="sec-wrap">
+     	<div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2 class="sec-title"><span>About the Author</span></h2>
+            </div><!--span12-->
+            <div class="span10 offset1">    
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="assets/img/author-photo.png" alt="author-photo"/>
+                  </a>
+                  <div class="media-body">
+                    <p class="text-lead-big">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                    <div class="social-icons text-left">
+                    <a href="#"><i class="icon-facebook"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    </div><!--/social-icons-->
+                  </div><!--/media-body-->
+                </div><!--/media-->
+            </div><!--span10-->
+        </div><!--/row-->
+        </div><!--/container-->
+     </section><!--/inside-->
+     
+     <section id="marketing-footer" class="sec-wrap">
+     	<div class="container">
+        <div class="row">
+        	<div class="span8 offset2">
+                <form class="hero-form">
+                   <div class="row-fluid">
+                    	<div class="span3 text-center">
+                    		<div class="marketing-media"><img src="assets/img/rdrcover.jpg" width="128" height="177" alt="book cover" /></div>
+                        </div>
+                        <div class="span9">
+                        <fieldset>
+                            <div class="control-group">
+                                <label>Get the ebook with your email address</label>
+                                <input type="text" class="input-block-level" placeholder="Email Address" id="email2"/>                               
+                                <button class="btn btn-info btn-large btn-block">Download Now</button>               
+                                 <span class="text-small">eBook includes PDF, ePub and Kindle versions <a href="#" class="pull-right">Read Privacy Policy</a>
+                                </span>             
+                            </div><!--/control-group-->
+                        </fieldset>
+                        </div><!--/span9-->
+                    </div><!--/row-fluid-->
+                </form>
+            </div><!--/span8-->
+        </div><!--/row-->
+	    </div><!--/container-->
+    </section><!--/inside-->
+	<footer>
+    	<div class="container">
+            <div class="row">
+                <div class="span12">
+                    <p class="text-center">&copy; Booky Landing Page 2013. All rights reserved.</p>
+                </div><!--/span12-->
+            </div><!--/row-->
+        </div><!--/container-->
+    </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="assets/js/plugins/magnificPopup/magnific-popup.min.js"></script>  
+    <!-- Quotes Rotator JS -->  
+    <script src="assets/js/plugins/QuotesRotator/js/jquery.cbpQTRotator.min.js"></script>
+    <script>
+	$(function () {
+		// Testimonials rotator
+		$( '#cbp-qtrotator' ).cbpQTRotator();
+		// Image Zoom
+		$('.thumbnails').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: true,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>How to sell books online</small>';
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		});
+	});
+	</script>
+  </body>
+</html>
