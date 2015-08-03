@@ -567,3 +567,8 @@ footer{
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 }
+
+.hero-desc a {
+	color: white;
+	font-weight: bold;
+}
