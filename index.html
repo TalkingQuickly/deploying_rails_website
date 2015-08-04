@@ -92,14 +92,14 @@
          </div><!--/row-->
          <div class="row">   
             <div class="span6">
-          		<div class="" id="">
-                    <div class="">
+          		<div class="accordian" id="chapter">
+                    <div class="accordian-group">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-parent="#chapter" href="#collapseOne">
+                        <a data-toggle="collapse" class="accordion-toggle" data-parent="#chapter" href="#collapseOne">
                           1.0 Introduction
                         </a>
                       </div>
-                      <div >
+                      <div id="collapseOne" class="accordian-body collapse">
                         <div class="accordion-inner">
                           <p class="text-lead">An introduction to the structure of the book, the philosophy behind deploying web applications robustly and which parts it's essential to read depending on your goals.</p>
                         </div>
@@ -107,11 +107,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseThree">
                           3.0 Tools and Terminology
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseThree" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A brief look at why using a tool to automate the setting up of servers is important and some high level terminology we'll encounter when using this books automation tool of choice; Chef.</p>
                         </div>
@@ -119,11 +119,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseFive">
                           5.0 Anatomy of a Chef Solo Project
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseFive" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A deeper dive into Chef and Chef Solo, the terminology associated with it and how to create a Chef project from scratch. Think `rails new` but for server configurations.</p>
                         </div>
@@ -131,11 +131,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseFiveTwo">
                           5.2 Node and Role Definitions
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseFiveTwo" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">First a look at the concept of a "node definition", a json file which defines everything about a server to be created. Then a look at how Chef allows us to create re-usable pieces of functionality which can then be applied to multiple servers or re-used in future projects using "roles".</p>
                         </div>
@@ -143,11 +143,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSixOne">
                           6.1 Managing Cookbooks with Berkshelf
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSixOne" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">For Rails we have bundler for making sure the correct dependencies are installed, for Chef we have Berkshelf which performs exactly the same function. With Berkshelf we can make sure we have all of the required "cookbooks" for setting up a server, making it easy to mix leveraging community written cookbooks with functionality we've developed ourselves.</p>
                         </div>
@@ -155,11 +155,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseEight">
                           8.0 Security
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseEight" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">Starting off with a look at some common security gotchas when deploying to a fresh VPS. Then some more detail around how to lock down SSH access, manage firewall rules and automatically set up users and public keys.</p>
                         </div>
@@ -167,11 +167,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTen">
                           10.0 Monit
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseTen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">When something crashes, in a perfect world, it will fix itself. This chapter covers how to use Monit to automatically monitor the health of services and restart them when they fail. In the event this fails, how to have Monit alert us via email so we can intervene and save the day.</p>
                         </div>
@@ -179,11 +179,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwelve">
                           12.0 PostgreSQL
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseTwelve" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">How to setup PostgreSQL, manage the different types of authentication, ensure we have the desired version and manage importing and exporting data.</p>
                         </div>
@@ -191,11 +191,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseFourteen">
                           14.0 MongoDB
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseFourteen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A quick look at when MongoDB is an appropriate data store then how to ensure we have the correct version installed and workaround any incompatibilities in community cookbooks for newer versions. Finally a quick introduction to importing and exporting databases.</p>
                         </div>
@@ -203,11 +203,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSixteen">
                           16.0 Capistrano Quickstart
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSixteen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">Like chapter 4, a chapter for those of us who prefer to read the instructions later. This chapter covers the minimum steps need to deploy an existing Rails application to our fresh new server.</p>
                         </div>
@@ -215,11 +215,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSixteenTwo">
                           16.2 Writing Custom Capistrano Tasks
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSixteenTwo" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">Our goal is to automate everything about interacting with our server. Eventually there will be something we need to do which no-one else has automated in a way we can re-use. This chapter covers writing custom Capistrano tasks. Once we've mastered this we can automate almost every interaction with our server imaginable.</p>
                         </div>
@@ -227,11 +227,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseEighteen">
                           18.0 Virtualhosts and SSL
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseEighteen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A deeper look at Nginx virtualhosts which control where requests are routed after they reach NGinx. Then a look at how to setup SSL and manage certificate rotation.</p>
                         </div>
@@ -239,11 +239,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwenty">
                           20.0 Automated Backups
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseTwenty" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">It's an unfortunate fact that eventually a server will fail. In this chapter we setup automatic database backups to Amazon S3 (or any other number of destinations) to ensure that in the event of a complete server failure, our data is recoverable.</p>
                         </div>
@@ -260,7 +260,7 @@
                           2.0 The Stack
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseTwo" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">An overview of the components which will make up our production Rails configuration, their purpose and a high level look at the rationale between choosing each one.</p>
                         </div>
@@ -268,11 +268,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseFour">
                           4.0 Quick Start
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseFour" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A chapter for the "read the instructions afterwards" types among us. This chapter provides step by step instructions for setting up a fully working, reproducible Rails server using the books sample code and a few simple commands.</p>
                         </div>
@@ -280,11 +280,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseFiveOne">
                           5.1 Creating a Chef Cookbook
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseFiveOne" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A detailed guide to how to create custom Chef cookbooks. Cookbooks are like gems but for re-usable bits of functionality on a server. We'll begin with the commands we'd type in by hand to install a piece of software on the server and convert this into the simplest possible cookbook to automate the process. We'll then iterate on this to take advantage of some of Chefs more powerful features.</p>
                         </div>
@@ -292,11 +292,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSix">
                           6.0 A Template for Rails Servers
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSix" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A more detailed introduction to the sample configuration which was used in Chapter 4's quick-start to setup a fully working server in just a few minutes.</p>
                         </div>
@@ -304,11 +304,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSeven">
                           7.0 Basic Server Setup
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSeven" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">The bare bones components needed on any server, how - and when - to setup automatic package updates, how to have the systems time keep automatically updated and why so many people get caught out by locales.</p>
                         </div>
@@ -316,11 +316,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseNine">
                           9.0 Rails Server Setup
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseNine" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">Making sure we have some basic packages and development headers required for installing common gems then a more detailed look at how to install Ruby and make sure we have the correct version available to our Rails application.</p>
                         </div>
@@ -328,11 +328,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseElleven">
                           11.0 NGinx
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseElleven" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">Nginx will be the first port of call when a request comes in. How to setup virtual hosts, serve static assets and a look at why we need Nginx at all.</p>
                         </div>
@@ -340,11 +340,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseThirteen">
                           13 MySQL
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseThirteen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">How to setup MySQL, manage the different types of authentication and ensure we have the required components installed for the MySQL gem. Finally a quick introduction to importing and exporting data.</p>
                         </div>
@@ -352,11 +352,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseFifteen">
                           15.0 Redis & Memcached
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseFifteen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A brief chapter on the two simplest parts of our stack. How to install Redis and Memcached, configuring whether or not they're bound to localhost and managing the maximum size they can reach.</p>
                         </div>
@@ -364,11 +364,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSixteenOne">
                           16.1 Deploying with Capistrano
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSixteenOne" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">A much more detailed introduction to how to deploy to our new server with Capistrano 3 whilst using no none-core Capistrano gems. Includes a brief look at the difference between versions 2 and 3 and a detailed section on managing server specific configuration files.</p>
                         </div>
@@ -376,11 +376,11 @@
                     </div><!--/accordion-group-->
                       <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseSeventeen">
                           17.0 Unicorn Configuration and Zero Downtime
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseSeventeen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">How to configure deployment so that when we deploy, there's a seamless switch from one version to the next, with no gap while the new version starts. Includes a detailed section on causes of potential problems when setting this up and how to troubleshoot if it doesn't work reliably.</p>
                         </div>
@@ -388,11 +388,11 @@
                     </div><!--/accordion-group-->
                     <div class="">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseTwo">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#chapter" href="#collapseNineteen">
                           19.0 Sidekiq
                         </a>
                       </div>
-                      <div id="collapseTwo" class="accordion-body ">
+                      <div id="collapseNineteen" class="accordion-body collapse">
                         <div class="accordion-inner">
                            <p class="text-lead">Sidekiq is one of the most popular and efficient background job processing libraries in the Rails ecosystem. Here we cover how to integrate starting and stopping Sidekiq workers as part of the deployment process and how to setup monitoring so they'll be automatically restarted in the event of a failure.</p>
                         </div>
